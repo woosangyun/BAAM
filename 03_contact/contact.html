@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html lang="kr">
+<head>
+<title>Studio BAAM - Contact</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1" />
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="description" content="홈페이지 제작,웹사이트 제작,모바일 홈페이지,기업 브랜딩 작업,어플리케이션 제작">
+<meta name="keywords" content="홈페이지,웹사이트,모바일사이트,브랜딩,앱,어플리케이션">
+<meta name="keywords" content="homepage,website,mobilesite,branding,app,application">
+<meta name="Robots" content="INDEX,FOLLOW">
+	
+<link href="../_css/reset.css" rel="stylesheet" type="text/css">
+<link href="../_css/aos.css"  rel="stylesheet" type="text/css">
+<link href="../_css/style.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="../_js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="../_js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="../_js/jquery.backgroundpos.js"></script>
+<script type="text/javascript" src="../_js/jquery.js"></script>
+<script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=GypG9H2_FRwRejVzxOty"></script>
+</head>
+<body>
+	
+	
+	<!--   HEADER 로드   -->
+	<header></header>
+	
+	<!--   CONTENTS   -->
+	<section id="contents">
+        <div class="contact">
+            <div class="info-wrap">
+                <div class="info">
+                    <div class="title">
+                        <p class="raj init-mask"><span>Contact</span></p>
+                    </div>
+                    <div class="con">
+                        <p class="stit raj init-mask"><span>Address</span></p><br>
+                        <p class="text init-mask"><span>서울특별시 강서구 마곡중앙로 161-8 <br class="mobile-only">두산더랜드파크 A동 1013호</span></p><br>
+                        <p class="stit raj init-mask"><span>Tel</span></p><br>
+                        <p class="text raj init-mask"><span>02-6989-8895</span></p><br>
+                        <p class="stit raj init-mask"><span>Fax</span></p><br>
+                        <p class="text raj init-mask"><span>0504-275-0988</span></p><br>
+                        <p class="stit raj init-mask"><span>Email</span></p><br>
+                        <p class="text raj init-mask"><span><a href="mailto:studiobaam@studio-baam.com">studiobaam@studio-baam.com</a></span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="map">
+                <div id="map" class="obj-show"></div>
+                <div class="bar bar-show"></div>
+            </div>
+        </div>
+	</section>
+	
+	<!--   FOOTER 로드   -->
+	<footer></footer>
+    
+    <script>
+        var position = new naver.maps.LatLng(37.569050, 126.826581);
+
+        var map = new naver.maps.Map('map', {
+            center: position,
+            zoom: 12
+        });
+
+        var markerOptions = {
+            position: position.destinationPoint(90, 15),
+            map: map,
+            icon: {
+                url: '../_images/common/peaker.png',
+                size: new naver.maps.Size(90, 48),
+                //scaledSize: new naver.maps.Size(60, 31),
+                origin: new naver.maps.Point(0, 0),
+                anchor: new naver.maps.Point(45, 48)
+            }
+        };
+
+        var marker = new naver.maps.Marker(markerOptions);
+    </script>
+    
+    
+</body>
+</html>
