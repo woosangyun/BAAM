@@ -146,6 +146,8 @@ $(function(){
         
         vNum = visualNum;
         $("#loader .item").eq(vNum).addClass("loader-expand");
+        $(".slogan .text-wrap").css("z-index",-1);
+        $(".slogan .text-wrap").eq(vNum).css("z-index",1);
     }
     
     /*$(window).onresize(function(){

@@ -85,6 +85,10 @@ button{cursor: pointer;}
 
 img, object, video, iframe{max-width: 100%;}
 
+*:focus{
+    outline: none;
+}
+
 .t{border:1px solid #F00;}
 
  ::selection {

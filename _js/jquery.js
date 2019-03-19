@@ -197,6 +197,9 @@ $(function(){
 
         });
         
+        $(".works .text-wrap li").css("z-index",-1);
+        $(".works .text-wrap li").eq(vNum).css("z-index",1);
+        
     }
     
     typeShow();

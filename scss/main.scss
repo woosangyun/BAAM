@@ -361,6 +361,7 @@ body{
         transform: scaleX(0);
         transform-origin: 100% 100%;
         opacity: 1;
+        z-index: -1;
     }
 }
 
@@ -399,7 +400,7 @@ body{
         animation-fill-mode: forwards;
     }
     &:before{
-         animation: type-mask 0.75s $easeInOutExpo;
+         animation: type-mask 0.75s $easeInOutExpo forwards;
     }
 }
 
@@ -410,7 +411,7 @@ body{
         animation-delay: 0.75s;
     }
     &:before{
-        animation: type-mask 0.75s $easeInOutExpo;
+        animation: type-mask 0.75s $easeInOutExpo forwards;
         animation-delay: 0.75s;
     }
 }
@@ -425,12 +426,10 @@ body{
         position: absolute;
         left: 0;
         top: 0;
-        /*&:first-child{
-            opacity: 1;
-            p{
-                color: #000;
-            }
-        }*/
+        z-index: -1;
+        &:first-child{
+            z-index: 1;
+        }
         p{
             font-size: 60px;
             font-weight: 100;
@@ -467,6 +466,8 @@ body{
                     text-transform: uppercase;
                     background: url("../_images/main/btn_arrow.png") no-repeat right center;
                     display: inline-block;
+                    position: relative;
+                    z-index: 2;
                 }
             }
             &.number{

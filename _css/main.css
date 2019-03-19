@@ -420,7 +420,7 @@ body { position: fixed; min-height: 100vh; }
   #visual .interaction.v3 { transform: translateX(100vw) scaleY(0.018); display: none; } }
 @keyframes type-mask { 0% { transform-origin: 0 0; transform: scaleX(0); opacity: 1; }
   50% { transform: scaleX(1); opacity: 1; }
-  100% { transform: scaleX(0); transform-origin: 100% 100%; opacity: 1; } }
+  100% { transform: scaleX(0); transform-origin: 100% 100%; opacity: 1; z-index: -1; } }
 @keyframes type-hide { 0% { opacity: 1; }
   49% { opacity: 1; }
   50% { opacity: 0; }
@@ -429,20 +429,20 @@ body { position: fixed; min-height: 100vh; }
   50% { opacity: 1; }
   100% { opacity: 1; } }
 .type-hide span { animation: type-hide 0.75s cubic-bezier(1, 0, 0, 1); animation-fill-mode: forwards; }
-.type-hide:before { animation: type-mask 0.75s cubic-bezier(1, 0, 0, 1); }
+.type-hide:before { animation: type-mask 0.75s cubic-bezier(1, 0, 0, 1) forwards; }
 
 .type-show span { animation: type-show 0.75s cubic-bezier(1, 0, 0, 1); animation-fill-mode: forwards; animation-delay: 0.75s; }
-.type-show:before { animation: type-mask 0.75s cubic-bezier(1, 0, 0, 1); animation-delay: 0.75s; }
+.type-show:before { animation: type-mask 0.75s cubic-bezier(1, 0, 0, 1) forwards; animation-delay: 0.75s; }
 
 .slogan { position: absolute; top: 31.3%; left: 18.48%; width: 31.52%; }
-.slogan .text-wrap { height: 474px; position: absolute; left: 0; top: 0; /*&:first-child{ opacity: 1; p{ color: #000; }
-}*/ }
+.slogan .text-wrap { height: 474px; position: absolute; left: 0; top: 0; z-index: -1; }
+.slogan .text-wrap:first-child { z-index: 1; }
 .slogan .text-wrap p { font-size: 60px; font-weight: 100; color: #000; margin-bottom: 10px; position: relative; line-height: 1; display: inline-block; }
 .slogan .text-wrap p span { opacity: 0; }
 .slogan .text-wrap p em { font-weight: 700; }
 .slogan .text-wrap p:before { content: ""; position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: #000; transform-origin: 0 0; opacity: 0; z-index: 1; }
 .slogan .text-wrap p.link { margin-top: 60px; font-size: 100%; }
-.slogan .text-wrap p.link a { padding-right: 30px; font-size: 20px; font-weight: 700; text-transform: uppercase; background: url("../_images/main/btn_arrow.png") no-repeat right center; display: inline-block; }
+.slogan .text-wrap p.link a { padding-right: 30px; font-size: 20px; font-weight: 700; text-transform: uppercase; background: url("../_images/main/btn_arrow.png") no-repeat right center; display: inline-block; position: relative; z-index: 2; }
 .slogan .text-wrap p.number { font-size: 24px; }
 .slogan .text-wrap p.number em { padding-right: 15px; background: url("../_images/main/split.png") no-repeat right center; margin-right: 5px; }
 .slogan .ui { position: absolute; top: 474px; z-index: 2; }
