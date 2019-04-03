@@ -27,8 +27,13 @@
         transform: scaleX(0);
         transform-origin: 100% 100%;
         opacity: 1;
-        z-index: -1;
     }
+    /*100%{
+        transform: scaleX(0);
+        transform-origin: 100% 100%;
+        opacity: 1;
+        z-index: -1;
+    }*/
 }
 
 @keyframes type-hide{
@@ -143,6 +148,56 @@
 
 
 ////////////////////     Works     ////////////////////
+
+
+.works-ui{
+    position: fixed;
+    top: 20px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    z-index: 1;
+    .flex{
+        display: flex;
+        justify-content: center;
+        a{
+            display: block;
+            width: 65px;
+            height: 65px;
+            &.prev{
+                background: url("../_images/works/btn_prev.png") no-repeat center;
+            }
+            &.next{
+                background: url("../_images/works/btn_next.png") no-repeat center;
+            }
+            &.list{
+                background: url("../_images/works/btn_list.png") no-repeat center;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:960px){
+    .works-ui{
+        top: 14px;
+        .flex{
+            a{
+                width: 28px;
+                height: 28px;
+                &.prev{
+                    background: url("../_images/works/btn_prev.png") no-repeat center / 11px;
+                }
+                &.next{
+                    background: url("../_images/works/btn_next.png") no-repeat center / 11px;
+                }
+                &.list{
+                    background: url("../_images/works/btn_list.png") no-repeat center / 18px;
+                }
+            }
+        }
+    }
+}
 
 
 .works{ 

@@ -3,7 +3,7 @@ var mousePos,phase,scene,camera,renderer,boxSize,geometry,materialGreen,pitchSeg
 
 function draw(){
     mousePos = {x:.5,y:.5};
-    document.addEventListener('mousemove', function (event) {  mousePos = {x:event.clientX/window.innerWidth, y:event.clientY/window.innerHeight};});
+    /*document.addEventListener('mousemove', function (event) {  mousePos = {x:event.clientX/window.innerWidth, y:event.clientY/window.innerHeight};});*/
     
     phase = 0;
 
